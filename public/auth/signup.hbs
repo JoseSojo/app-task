@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto card bg-dark form">
+      <div class="card-header border-bottom border-esp">
+        <h3 class='text-center text-esp'>Crear Cuenta</h3>
+      </div>
+      <div class="card-body">
+        <form action="/signup" method="post" autocomplete="off">
+          <div class="form-group py-2">
+            <label for="fullname" class='text-light lead'>Nombre Completo:</label>
+            <input type="text" required id='fullname-singup' name="fullname" placeholder="Nombre Completo" class="border-none shadow-none form-control" autofocus>
+            <p class="text-muted">Solo puedes agregar letras a/z</p>
+          </div>
+          <div class="form-group py-2">
+            <label for="username" class='text-light lead'>Nombre de Usuario:</label>
+            <input type="text" required id='username-singup' name="username" placeholder="Nombre de Usuario" class="border-none shadow-none form-control">
+            <p class="text-muted">Solo puedes agregar letras a/z y numeros</p>
+          </div>
+          <div class="container-fluid p-0 my-2">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="password" class='text-light lead'>Contraseña:</label>
+                <input type="password" id='password-singup' required name="password" placeholder="Contraseña" class="border-none shadow-none form-control">
+                <p class="text-muted">la contraseña debe ser mayor a 8 digitos solo letras, números y . * -</p>
+              </div>
+              <div class="col-md-6">
+                <label for="password" class='text-light lead'>Repetir Contraseña:</label>
+                <input type="password" id='repeat-password-singup' required placeholder="Repetir Contraseña" class="border-none shadow-none form-control">
+                <p class="text-muted">Las contraseñas deben ser iguales</p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type='submit' id='btn-submit-signup' class="disabled btn btn-success w-100 btn-block">Crear Cuenta</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

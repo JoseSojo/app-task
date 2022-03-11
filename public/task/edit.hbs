@@ -1,0 +1,24 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-5 m-auto card bg-dark p-0 form">
+      <div class="card-header border-bottom border-esp">
+        <h3 class="text-esp text-center">Editar Tarea</h3>
+      </div>
+      <div class="card-body">
+        <form class="" action="/task/edit/{{tasks.id}}" method="post" autocomplete="off">
+          <div class="form-group my-2">
+            <label for="TaskTitle" class='text-light'>Nuevo Titulo:</label>
+            <input type="text" required id='TaskTitle' name="TaskTitle" placeholder="Titulo" class="form-control" value='{{tasks.TaskTitle}}'>
+          </div>
+          <div class="form-group my-2">
+            <label for="TaskDescription" class="text-light">Nueva descripción:</label>
+            <textarea name="TaskDescription" required placeholder="Descipción" class="form-control">{{tasks.TaskDescription}}</textarea>
+          </div>
+          <button type="submit" class='btn btn-success w-100'>
+            Editar Tarea
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

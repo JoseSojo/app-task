@@ -1,0 +1,18 @@
+<div class="container-fluid bg-index">
+  <div class="row">
+    <div class="col-12 d-flex flex-column center-xy content-index pt-5">
+    {{#if user }}
+      <h2 class="smg-welcome py-3">Bienvenido  <b>{{user.fullname}}</b></h2>
+      <h6 class="smg-welcome py-3">Comienza a crear una tarea</h6>
+      <p class="smg-welcome"><a href="/task/add" class='btn btn-success shadow-lg'>Crear tarea</a></p>
+    {{else}}
+    <p class="smg-welcome display-5">Bienvenido</p>
+    <p class="smg-welcome">¿Que esperas para Crear una cuenta o iniciar sesión?</p>
+    <p class="smg-welcome pt-3">
+      <a href="/signin" class="btn btn-success rounded-0 shadow smg-welcome"><b>Iniciar Sesión<b></a>
+      <a href="/signup" class="btn btn-warning rounded-0 shadow smg-welcome"><b>Crear cuenta<b></a>
+    </p>
+    {{/if}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+
+<nav class="navbar navbar-dark bg-dark border-2 border-bottom border-esp mb-2">
+  <div class="container">
+    <a class="navbar-brand text-esp title-nav" href="/">Task App</a>
+    <ul class="nav">
+      {{#if user}}
+        {{#isEqual titleTab 'add' }}
+          <li class="nav-item mx-md-1">
+            <a href="#" class="item-nav {{this}}">
+              <i class="bi-clipboard-plus lead"></i>
+            </a>
+          </li>
+        {{else}}
+          <li class="nav-item mx-md-1">
+            <a href="/task/add" class="item-nav {{this}}">
+              <i class="bi-clipboard-plus lead"></i>
+            </a>
+          </li>
+        {{/isEqual}}
+
+        {{#isEqual titleTab 'index' }}
+          <li class="nav-item mx-md-1">
+            <a href="#" class="item-nav {{this}}">
+              <i class="bi-clipboard lead"></i>
+            </a>
+          </li>
+        {{else}}
+          <li class="nav-item mx-md-1">
+            <a href="/task" class="item-nav {{this}}">
+              <i class="bi-clipboard lead"></i>
+            </a>
+          </li>
+        {{/isEqual}}
+
+        {{#isEqual titleTab 'profile' }}
+          <li class="nav-item mx-md-1">
+          <a href="#" class="item-nav {{this}}">
+            <i class="bi-person-circle lead"></i>
+          </a>
+        </li>
+        {{else}}
+          <li class="nav-item mx-md-1">
+            <a href="/profile" class="item-nav {{this}}">
+              <i class="bi-person-circle lead"></i>
+            </a>
+          </li>
+        {{/isEqual}}
+
+        <li class="item-nav nav-item mx-md-1">
+          <a href="/logout" class="nav-link link-simple">
+            <i class="bi-box-arrow-right lead"></i>
+          </a>
+        </li>
+      {{else}}
+
+        {{#isEqual titleTab 'signin' }}
+          <li class="nav-item mx-md-1">
+          <a href="#" class="{{this}}">
+            Iniciar Sesión
+          </a>
+        </li>
+        {{else}}
+          <li class="nav-item mx-md-1">
+            <a href="/signin" class="{{this}}">
+              Iniciar Sesión
+            </a>
+          </li>
+        {{/isEqual}}
+
+        {{#isEqual titleTab 'signup' }}
+          <li class="nav-item mx-md-1">
+          <a href="#" class="{{this}}">
+            Crear Cuenta
+          </a>
+        </li>
+        {{else}}
+          <li class="nav-item mx-md-1">
+            <a href="/signup" class="{{this}}">
+              Crear Cuenta
+            </a>
+          </li>
+        {{/isEqual}}
+      {{/if}}
+    </ul>
+
+  </div>
+</nav>

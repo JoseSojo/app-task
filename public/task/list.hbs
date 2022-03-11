@@ -1,0 +1,40 @@
+<div class="container ">
+  <div class="row">
+
+    {{#each tasks}}
+      <div class="col-md-4 my-3 card-task">
+        <div class="card text-center shadow px-0 bg-dark">
+          <div class="card-header border-bottom border-esp">
+            <h3 class="card-title title-card">
+              {{TaskTitle}}
+            </h3>
+          </div>
+          <div class="card-body">
+            <p class="text-muted text-card lead">
+              {{TaskDescription}}
+            </p>
+            <p class="text-muted text-card">
+              {{timeago created_at}}
+            </p>
+            <p>
+              <a href="/task/delete/{{id}}" class='btn btn-card btn-danger col-5'>
+                <i class="bi-trash-fill lead"></i>
+              </a>
+              <a href="/task/edit/{{id}}" class='btn btn-card btn-success col-5'>
+                <i class="bi-pencil-fill lead"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <div class="alert alert-info col-md-12 m-auto text-center">
+        <p class="text-muted">
+          No hay tareas Guardadas
+          <a href="/task/add">Crear una tarea</a>
+        </p>
+      </div>
+    {{/each}}
+
+  </div>
+</div>

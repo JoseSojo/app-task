@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-5 card m-auto bg-dark form">
+        <div class="card-header border-bottom border-esp">
+          <h3 class="text-esp text-center">Editar datos</h3>
+        </div>
+        <div class="card-body">
+          <form class="" action="/profile/edit/{{user.id}}" method="post">
+            <div class="form-group my-2">
+              <label for="fullname" class='text-light'>Nombre Completo:</label>
+              <input type="text" name="fullname" id='fullname'  value='{{user.fullname}}' placeholder="Nombre completo" class="form-control">
+            </div>
+            <div class="form-group my-2">
+              <label for="username" class='text-light'>Nombre de Usuario:</label>
+              <input type="text" name="username" id='username'  value='{{user.username}}' placeholder="Nombre de Usuario" class="form-control">
+            </div>
+            <div class="form-group my-2">
+              <label for="password" class='text-light'>Contraseña:</label>
+              <input type="password" name="password" id='password'  value='' placeholder="Contraseña" class="form-control">
+            </div>
+            <div class="form-group my-2">
+              <button type="submit" class="btn btn-success w-100">Actualizar</button>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+</div>
